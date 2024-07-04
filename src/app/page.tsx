@@ -1,10 +1,14 @@
-import MagicLink from "@/components/magic";
+import MagicLink from "@/components/methods/magic";
+import GitHub from "@/components/methods/github";
 
 export default function Home() {
   return (
-    <main className="pt-10 gap-3 flex flex-row justify-center items-center bg-zinc-600 p-10 border-emerald-500 border-solid border-2 ">
-      <h3>Entrar com:</h3>
-      <MagicLink />
+    <main className="p-14">
+      <div className="flex flex-col gap-10 justify-center items-center">
+        <h3>Entrar com:</h3>
+        <MagicLink />
+        <GitHub />
+      </div>
     </main>
   );
 }
