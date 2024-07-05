@@ -1,13 +1,18 @@
 import * as React from "react";
 
 interface EmailTemplateProps {
-  firstName: string;
+  name: string;
+  authLink: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-  firstName,
+  authLink,
+  name,
 }) => (
-  <div>
-    <h1>Olá, {firstName}!</h1>
-  </div>
+  <html lang="pt-br">
+    <body>
+      <h3>Olá, {name}!</h3>
+      <p>Seu link de acesso: {authLink} </p>
+    </body>
+  </html>
 );

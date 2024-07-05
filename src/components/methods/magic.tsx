@@ -9,7 +9,7 @@ export default function magicLink() {
       className="p-10 flex flex-col items-start justify-start gap-3 border-gray-100 rounded-md border-solid border-2"
       action={async (formData) => {
         "use server";
-        await signIn("resend", formData);
+        await signIn("resend", { redirectTo: "/verifyemail" });
       }}
     >
       <h6 className="text-zinc-400">Magic Link</h6>
